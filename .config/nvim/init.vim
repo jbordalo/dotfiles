@@ -23,7 +23,11 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 set undodir=~/.vimid
 set undofile
-
+" Move lines with Alt Arrow
+nnoremap <A-Up> :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
 " shift-tab
 " for command mode
 nnoremap <S-Tab> <<
