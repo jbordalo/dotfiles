@@ -8,9 +8,8 @@ alias myip='curl ipinfo.io/ip'
 alias ll='ls -l'
 alias la='ls -la'
 alias cs='xclip -selection clipboard'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
-alias interactive-mode='cobot interactive-mode --config-file $COBOT_HOME/AlexaPrizeCobotLambda/twiz_bot/config.yaml --lambda-handler twiz_bot.twiz_bot --service-config-file $COBOT_HOME/AlexaPrizeCobotLambda/testing/test_service_module_config.json --user_id joao_bordalo'
 alias speedtest='speedtest --simple'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
 
 function fish_prompt
 	set_color brblack
@@ -78,10 +77,3 @@ function fish_greeting
 
 	set_color normal
 end
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /home/bordalo/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
-export COBOT_HOME=/home/bordalo/cobot_home
-fish_add_path $COBOT_HOME
