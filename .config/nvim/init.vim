@@ -39,6 +39,10 @@ inoremap <S-Tab> <C-d>
 nnoremap <C-W> db
 nnoremap <C-U> d0
 
+" saving
+nnoremap <C-S> :w <CR>==
+inoremap <C-S> <Esc>:w <CR>==gi
+
 call plug#begin()
 
 Plug 'rstacruz/vim-closer'
