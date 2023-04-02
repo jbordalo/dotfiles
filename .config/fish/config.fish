@@ -10,6 +10,7 @@ alias la='ls -la'
 alias cs='xclip -selection clipboard'
 alias speedtest='speedtest --simple'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
+alias vim='nvim'
 
 function fish_prompt
 	set_color brblack
