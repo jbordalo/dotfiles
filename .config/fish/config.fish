@@ -11,6 +11,8 @@ alias cs='xclip -selection clipboard'
 alias speedtest='speedtest --simple'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
 alias vim='nvim'
+alias python='python3'
+alias ctop='docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock --name ctop quay.io/vektorlab/ctop:latest'
 
 function fish_prompt
 	set_color brblack
@@ -78,3 +80,22 @@ function fish_greeting
 
 	set_color normal
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/bordalo/miniconda3/bin/conda
+    eval /home/bordalo/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/bordalo/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/bordalo/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/bordalo/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+function nvm
+    bash -c "source ~/.nvm/nvm.sh; nvm $argv"
+end
+
+set -x PATH $NVM_DIR/versions/node/v22.7.0/bin $PATH
