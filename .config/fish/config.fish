@@ -13,6 +13,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
 alias vim='nvim'
 alias python='python3'
 alias ctop='docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock --name ctop quay.io/vektorlab/ctop:latest'
+alias disks='lsblk -o NAME,FSTYPE,SIZE,UUID,MOUNTPOINTS'
 
 function fish_prompt
 	set_color brblack
