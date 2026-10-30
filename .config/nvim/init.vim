@@ -44,7 +44,15 @@ nnoremap <C-S> :w <CR>==
 inoremap <C-S> <Esc>:w <CR>==gi
 
 call plug#begin()
-
-Plug 'rstacruz/vim-closer'
-
+Plug 'm4xshen/autoclose.nvim'
+Plug 'shaunsingh/nord.nvim'
 call plug#end()
+
+colorscheme nord
+lua << EOF
+require("autoclose").setup({
+    options = {
+        disable_when_touch = true,
+    }
+})
+EOF

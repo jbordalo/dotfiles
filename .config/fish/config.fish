@@ -102,3 +102,4 @@ function nvm
 end
 
 set -x PATH $NVM_DIR/versions/node/v22.7.0/bin $PATH
+set -x PATH $PATH (go env GOPATH)/bin
