@@ -250,8 +250,12 @@ map("i", "<A-Down>", "<Esc><cmd>m .+1<CR>==gi")
 map("v", "<A-Up>", ":m '<-2<CR>gv=gv", { silent = true })
 map("v", "<A-Down>", ":m '>+1<CR>gv=gv", { silent = true })
 
--- Shift+Tab to dedent
+-- Tab / Shift+Tab indent / dedent in Normal and Visual mode (not Select mode,
+-- which blink.cmp uses for snippet jumps; Insert-mode Tab stays with blink)
+map("n", "<Tab>", ">>")
 map("n", "<S-Tab>", "<<")
+map("x", "<Tab>", ">gv")
+map("x", "<S-Tab>", "<gv")
 map("i", "<S-Tab>", "<C-d>")
 
 -- Ctrl+Shift+Left/Right: select by word (needs terminal support)
